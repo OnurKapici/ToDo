@@ -41,12 +41,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MasterPages\ListItemCode.cs" />
     <Compile Include="MasterPages\MyDetails.xaml.cs">
       <DependentUpon>MyDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\MyMaster.xaml.cs">
       <DependentUpon>MyMaster.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\TodoItem.cs" />
     <Compile Include="MyMasterPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
