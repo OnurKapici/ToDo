@@ -3,6 +3,14 @@
 
   <style name="MainTheme" parent="MainTheme.Base">
   </style>
+ 
+  <style name="MainTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+      <item name="android:buttonStyle">@style/NoShadowButton</item>
+  </style>
+  <style name="NoShadowButton" parent="android:style/Widget.Button">
+      <item name="android:stateListAnimator">@null</item>
+     
+  </style>
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
