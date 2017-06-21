@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDo.MasterPages.MyDetails"
+             Title="MyDetails">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ContentView x:Name="blueBox" BackgroundColor="#3B5998"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=0,Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.15}">
+
+                <RelativeLayout>
+                    <StackLayout Orientation="Horizontal" RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                        <Button Image="menu.png" Margin="5"  Clicked="MenuButton_Clicked" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="Start" BackgroundColor="Transparent" />
+                        <Label Text="My Day" Margin="5"
+         HorizontalOptions="CenterAndExpand"  VerticalTextAlignment="Center" FontSize="30" TextColor="White"/>
+
+                        <Button Image="Light.png" Margin="5" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="End" BackgroundColor="Transparent" />
+
+
+
+                    </StackLayout>
+                </RelativeLayout>
+            </ContentView>
+
+            <ContentView BackgroundColor="WhiteSmoke"
+          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+            ElementName=blueBox,Property=Height,Factor=1}"
+          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.85}">
+            
+            
+            
+            
+            
+            
+            
+            </ContentView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
