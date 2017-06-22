@@ -41,7 +41,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MasterPages\ListItemCode.cs" />
     <Compile Include="MasterPages\MyDetails.xaml.cs">
       <DependentUpon>MyDetails.xaml</DependentUpon>
     </Compile>

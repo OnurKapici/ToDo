@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDo.MasterPages.MyMaster"
-             Title="MyMaster" x:Name="MyMaster1">
+             Title="MyMaster">
+
     
-    <ContentPage.Content >
+        <ContentPage.Content ><RelativeLayout>
         <StackLayout Padding="0,25,0,0"  Orientation="Horizontal">
             
     
@@ -23,5 +25,30 @@
                 </TableRoot>
         </TableView>
         </StackLayout>
+
+        <StackLayout>
+            <ListView
+            x:Name="listViewMenu"
+            BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Image="avatar.png" BackgroundColor="Transparent"          
+          BorderWidth="0"
+          BorderColor="Transparent"
+          BorderRadius="0" HorizontalOptions="Start" />
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+
+ </RelativeLayout>
     </ContentPage.Content>
+       
 </ContentPage>
