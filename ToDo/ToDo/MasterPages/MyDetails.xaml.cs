@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-
+using ToDo.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,6 +24,20 @@ namespace ToDo.MasterPages
            
         }
 
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Reset the 'resume' id, since we just want to re-start here
+
+            var items = new List<TodoItem>();
+            items.Add(new TodoItem() { ID = 1, Name = "Görev 1", Done = true });
+            items.Add(new TodoItem() { ID = 2, Name = "Görev 2", Done = false });
+            listView.ItemsSource = items;
+
+        }
+
         private void MenuButton_Clicked(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -31,7 +45,7 @@ namespace ToDo.MasterPages
             {
                 ((MyMasterPage)App.Current.MainPage).IsPresented = false;
             } else
-            {
+            {  
                 ((MyMasterPage)App.Current.MainPage).IsPresented = true;
             }
         }

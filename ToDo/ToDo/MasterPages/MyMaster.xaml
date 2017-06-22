@@ -1,18 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDo.MasterPages.MyMaster"
-             Title="MyMaster" x:Name="MyMaster1">
-    
-    <ContentPage.Content>
+             Title="MyMaster">
 
-        <StackLayout Padding="0,20,0,0" Margin="5,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Image Source="icon.png" HorizontalOptions="Start" VerticalOptions="Start" />
-            <Label Text="Ayberk" HorizontalOptions="Start" HorizontalTextAlignment="Center" Margin="0,10,0,0" />
+    
+        <ContentPage.Content ><RelativeLayout>
+        <StackLayout Padding="0,25,0,0"  Orientation="Horizontal">
+            
+    
+        <TableView Intent="Form"  >
+            <TableRoot>
+                <TableSection>
+                        <ViewCell>
+                            <StackLayout Padding="15, 5, 15, 5" Orientation="Horizontal">
+                                <Image Source="avatar.png" HorizontalOptions="Start" />
+                                <Label Text="Ayberk Piyade" FontSize="20"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" />
+                                <Image Source="search.png" HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
+
+                </TableSection>
+                </TableRoot>
+        </TableView>
+        </StackLayout>
+
+        <StackLayout>
+            <ListView
+            x:Name="listViewMenu"
+            BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Image="avatar.png" BackgroundColor="Transparent"          
+          BorderWidth="0"
+          BorderColor="Transparent"
+          BorderRadius="0" HorizontalOptions="Start" />
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
 
         </StackLayout>
 
-
-
+ </RelativeLayout>
     </ContentPage.Content>
+       
 </ContentPage>

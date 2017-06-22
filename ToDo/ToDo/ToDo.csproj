@@ -47,6 +47,7 @@
     <Compile Include="MasterPages\MyMaster.xaml.cs">
       <DependentUpon>MyMaster.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\TodoItem.cs" />
     <Compile Include="MyMasterPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

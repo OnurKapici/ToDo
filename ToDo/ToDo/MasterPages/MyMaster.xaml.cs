@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-
+using ToDo.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,6 +25,19 @@ namespace ToDo.MasterPages
             InitializeComponent();
             
         }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Reset the 'resume' id, since we just want to re-start here
+
+            var items2 = new List<TodoItem>();
+            items2.Add(new TodoItem() { ID = 3, Name = "Görev 3", Done = true });
+            items2.Add(new TodoItem() { ID = 4, Name = "Görev 4", Done = false });
+            listViewMenu.ItemsSource = items2;
+        }
+
     }
 
     class MyMasterViewModel : INotifyPropertyChanged

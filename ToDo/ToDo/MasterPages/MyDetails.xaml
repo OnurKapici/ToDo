@@ -6,21 +6,18 @@
     <ContentPage.Content>
         <RelativeLayout>
             <ContentView x:Name="blueBox" BackgroundColor="#3B5998"
-                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-            Property=Height,Factor=0,Constant=0}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.15}">
-
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.10}">
                 <RelativeLayout>
-                    <StackLayout Orientation="Horizontal" RelativeLayout.WidthConstraint=
-              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
-            RelativeLayout.HeightConstraint=
-              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
-                        <Button Image="menu.png" Margin="5"  Clicked="MenuButton_Clicked" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="Start" BackgroundColor="Transparent" />
-                        <Label Text="My Day" Margin="5"
-         HorizontalOptions="CenterAndExpand"  VerticalTextAlignment="Center" FontSize="30" TextColor="White"/>
+                    <Image Source="background.jpg" Aspect="AspectFill"
+                      RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                             RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+                    <StackLayout Orientation="Horizontal" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                        <Button Image="menu2.png" Margin="0"  Clicked="MenuButton_Clicked" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="Start" BackgroundColor="Transparent" />
+                        <Label Text="My Day" Margin="5"  HorizontalOptions="CenterAndExpand"  VerticalTextAlignment="Center" FontSize="25" TextColor="White"/>
                         <Button Image="Light.png" Margin="5" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="End" BackgroundColor="Transparent" />
-
                     </StackLayout>
                 </RelativeLayout>
             </ContentView>
@@ -29,16 +26,29 @@
           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=blueBox,Property=Height,Factor=1}"
           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.85}">
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.90}">
+
+                <StackLayout>
+                    <ListView
+            x:Name="listView"
+            BackgroundColor="White">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <Button Image="avatar.png" BackgroundColor="Transparent"          
+          BorderWidth="0"
+          BorderColor="Transparent"
+          BorderRadius="0" HorizontalOptions="Start" />
+                                        <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
 
 
-
-
-
-                
-
-
-
+                </StackLayout>
 
 
 
