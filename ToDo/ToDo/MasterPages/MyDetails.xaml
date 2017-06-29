@@ -2,31 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDo.MasterPages.MyDetails"
-             Title="MyDetails">
+             Title="MyDetails" BackgroundColor="White">
     <ContentPage.Content>
         <RelativeLayout>
             <ContentView x:Name="blueBox" BackgroundColor="#3B5998"
                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=0}"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.10}">
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.25}">
                 <RelativeLayout>
-                    <Image Source="background.jpg" Aspect="AspectFill"
+                    <Image Source="wallpaper.jpg" Aspect="Fill"
                       RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
                              RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
                     <StackLayout Orientation="Horizontal" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
-                        <Button Image="menu2.png" Margin="0"  Clicked="MenuButton_Clicked" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="Start" BackgroundColor="Transparent" />
-                        <Label Text="My Day" Margin="5"  HorizontalOptions="CenterAndExpand"  VerticalTextAlignment="Center" FontSize="25" TextColor="White"/>
-                        <Button Image="Light.png" Margin="5" BorderWidth="0" BorderRadius="0" BorderColor="Transparent"  HorizontalOptions="End" BackgroundColor="Transparent" />
+                                VerticalOptions="FillAndExpand"  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" Padding="15,5,15,5">
+                       
+                        <Button Image="menuw.png" Margin="5"  Clicked="MenuButton_Clicked" BorderWidth="0" BorderRadius="0" BorderColor="Transparent" VerticalOptions="Start"  HorizontalOptions="Start" BackgroundColor="Transparent" />
+                        <Button Image="idea.png" Margin="5" BorderWidth="0" BorderRadius="0" BorderColor="Transparent" VerticalOptions="Start"  HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" />
+                        
+
+
+
+
+
                     </StackLayout>
+                  
                 </RelativeLayout>
+              
             </ContentView>
 
-            <ContentView BackgroundColor="WhiteSmoke"
+            <ContentView BackgroundColor="White"
           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=blueBox,Property=Height,Factor=1}"
           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.90}">
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.75}">
 
                 <StackLayout>
                     <ListView
@@ -34,25 +42,35 @@
             BackgroundColor="White">
                         <ListView.ItemTemplate>
                             <DataTemplate>
+
                                 <ViewCell>
-                                    <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                        <Button Image="avatar.png" BackgroundColor="Transparent"          
+                                    <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="15,0,15,0">
+                                        <Button Image="Check.png" BackgroundColor="Transparent"          
           BorderWidth="0"
           BorderColor="Transparent"
           BorderRadius="0" HorizontalOptions="Start" />
                                         <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-
-
+                    
+                    <Button Image="plus.png" BackgroundColor="Transparent"          
+          BorderWidth="0"
+          BorderColor="Transparent"
+          BorderRadius="0"  HorizontalOptions="End" VerticalOptions="End" Margin="15,0,15,5" />
+                   
                 </StackLayout>
 
 
+              
+
 
             </ContentView>
+            
         </RelativeLayout>
+        
     </ContentPage.Content>
 </ContentPage>

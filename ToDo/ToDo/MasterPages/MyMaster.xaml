@@ -3,38 +3,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDo.MasterPages.MyMaster"
-             Title="MyMaster">
+             Title="MyMaster" BackgroundColor="White">
 
     
-        <ContentPage.Content ><RelativeLayout>
-        <StackLayout Padding="0,25,0,0"  Orientation="Horizontal">
-            
-    
-        <TableView Intent="Form"  >
-            <TableRoot>
-                <TableSection>
-                        <ViewCell>
-                            <StackLayout Padding="15, 5, 15, 5" Orientation="Horizontal">
-                                <Image Source="avatar.png" HorizontalOptions="Start" />
-                                <Label Text="Ayberk Piyade" FontSize="20"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" />
-                                <Image Source="search.png" HorizontalOptions="End" />
-                            </StackLayout>
-                        </ViewCell>
+        <ContentPage.Content >
+       
+     
+            <StackLayout Padding="0,25,0,0"  >
+                
+                <StackLayout Padding="15, 5, 15, 5" Orientation="Horizontal">
+                    <Image Source="avatar.png" HorizontalOptions="Start" />
+                    <Label Text="Ayberk Piyade" FontSize="20"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" />
+                    <Image Source="search.png" HorizontalOptions="End" />
+                </StackLayout>
 
-                </TableSection>
-                </TableRoot>
-        </TableView>
-        </StackLayout>
 
-        <StackLayout>
+
+            <StackLayout  Orientation="Horizontal">
             <ListView
             x:Name="listViewMenu"
             BackgroundColor="White">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Button Image="avatar.png" BackgroundColor="Transparent"          
+                                <StackLayout Margin="0,0,0,0"  Padding="15, 5, 15, 10"  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Image="home2.png" BackgroundColor="Transparent"          
           BorderWidth="0"
           BorderColor="Transparent"
           BorderRadius="0" HorizontalOptions="Start" />
@@ -44,11 +37,11 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+                
+        </StackLayout>
 
 
         </StackLayout>
-
- </RelativeLayout>
     </ContentPage.Content>
        
 </ContentPage>

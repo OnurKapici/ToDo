@@ -33,8 +33,8 @@ namespace ToDo.MasterPages
             // Reset the 'resume' id, since we just want to re-start here
 
             var items2 = new List<TodoItem>();
-            items2.Add(new TodoItem() { ID = 3, Name = "Görev 3", Done = true });
-            items2.Add(new TodoItem() { ID = 4, Name = "Görev 4", Done = false });
+            items2.Add(new TodoItem() { ID = 3, Name = "Günüm", Done = true });
+            items2.Add(new TodoItem() { ID = 4, Name = "Listem", Done = false });
             listViewMenu.ItemsSource = items2;
         }
 
