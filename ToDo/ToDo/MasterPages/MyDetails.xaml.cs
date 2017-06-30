@@ -49,6 +49,22 @@ namespace ToDo.MasterPages
                 ((MyMasterPage)App.Current.MainPage).IsPresented = true;
             }
         }
+
+        private void CheckButton_Clicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            if (button.Image == "Check.png")
+            {
+                button.Image = "CheckEmpty.png";
+            }
+            else
+            {
+                button.Image = "Check.png";
+            }
+
+        }
+
+        
     }
 
     class MyDetailsViewModel : INotifyPropertyChanged

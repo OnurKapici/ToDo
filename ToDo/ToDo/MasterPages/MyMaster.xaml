@@ -5,43 +5,32 @@
              x:Class="ToDo.MasterPages.MyMaster"
              Title="MyMaster" BackgroundColor="White">
 
-    
-        <ContentPage.Content >
-       
-     
-            <StackLayout Padding="0,25,0,0"  >
+
+    <ContentPage.Content >
+        <StackLayout Padding="0,25,0,0"  >
+           
+            <StackLayout Padding="15, 5, 15, 5" Orientation="Horizontal">
+                <Image Source="avatar.png" HorizontalOptions="Start" />
+                <Label Text="Ayberk Piyade" FontSize="20"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" />
+                <Image Source="search.png" HorizontalOptions="End" />
+            </StackLayout>
                 
-                <StackLayout Padding="15, 5, 15, 5" Orientation="Horizontal">
-                    <Image Source="avatar.png" HorizontalOptions="Start" />
-                    <Label Text="Ayberk Piyade" FontSize="20"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" />
-                    <Image Source="search.png" HorizontalOptions="End" />
-                </StackLayout>
-
-
-
             <StackLayout  Orientation="Horizontal">
-            <ListView
-            x:Name="listViewMenu"
-            BackgroundColor="White">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+                <ListView  x:Name="listViewMenu" BackgroundColor="White">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
                                 <StackLayout Margin="0,0,0,0"  Padding="15, 5, 15, 10"  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Button Image="home2.png" BackgroundColor="Transparent"          
-          BorderWidth="0"
-          BorderColor="Transparent"
-          BorderRadius="0" HorizontalOptions="Start" />
-                                <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-                
-        </StackLayout>
-
-
+                                    <Button Image="home2.png" BackgroundColor="Transparent"    BorderWidth="0" BorderColor="Transparent"  BorderRadius="0" HorizontalOptions="Start" />
+                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
-       
+     
+
 </ContentPage>
